@@ -1,6 +1,6 @@
 # AS-Client
 
-Electron wrapper for AudioStreamer (https://audiostreamer.org/)
+A stupid Electron wrapper for AudioStreamer (https://audiostreamer.org/)
 
 
 ## License

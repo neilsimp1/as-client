@@ -1,6 +1,7 @@
 const electron = require("electron");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+const ipcMain = electron.ipcMain;
 
 const path = require("path");
 const url = require("url");
@@ -29,4 +30,9 @@ app.on("window-all-closed", function() {
 
 app.on("activate", function () {
 	if(mainWindow === null) createWindow();
+});
+
+ipcMain.on("loadPage", (event, arg) => {
+	let asd = 123;
+	mainWindow.loadURL(arg);
 });

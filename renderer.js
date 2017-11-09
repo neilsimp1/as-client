@@ -1,5 +1,3 @@
-const { ipcRenderer } = require("electron");
-
 const form = document.querySelector("form");
 
 window.addEventListener("DOMContentLoaded", function() {
@@ -12,7 +10,14 @@ form.addEventListener("submit", function() {
 
 	if(/(.*):(\d*)\/?(.*)/.test(url)){
 		window.localStorage.setItem("url", url);
-		ipcRenderer.sendSync("loadPage", url);
+		//ipcRenderer.sendSync("loadPage", url);
+		let iframe = document.createElement("iframe");
+		iframe.src= url;
+		iframe.width = window.innerWidth;
+		iframe.height = window.innerHeight;
+
+		document.body.innerHTML = "";
+		document.body.appendChild(iframe);
 	}
 
 	return false;

@@ -1,7 +1,6 @@
 const electron = require("electron");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-const ipcMain = electron.ipcMain;
 
 const path = require("path");
 const url = require("url");
@@ -12,7 +11,8 @@ function createWindow() {
 	mainWindow = new BrowserWindow({
 		width: 800,
 		height: 600,
-		icon: __dirname + "/audiostreamer_logo.gif"
+		icon: __dirname + "/audiostreamer_logo.gif",
+		"node-integration": false
 	});
 
 	mainWindow.loadURL(url.format({
@@ -34,9 +34,4 @@ app.on("window-all-closed", function() {
 
 app.on("activate", function () {
 	if(mainWindow === null) createWindow();
-});
-
-ipcMain.on("loadPage", (event, arg) => {
-	let asd = 123;
-	mainWindow.loadURL(arg);
 });

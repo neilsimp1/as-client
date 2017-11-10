@@ -1,0 +1,19 @@
+{
+  "name": "as-client",
+  "version": "1.0.0",
+  "description": "A stupid Electron wrapper for AudioStreamer (https://audiostreamer.org/)",
+  "main": "main.js",
+  "scripts": {
+    "publish": "electron-packager . --all --overwrite --icon=./audiostreamer_logo.gif --out=dist",
+    "start": "electron ."
+  },
+  "repository": "https://github.com/neilsimp1/as-client",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "Neil Simpson",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}

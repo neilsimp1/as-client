@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AS-Client</title>
+	<style>
+		body {
+			background: gray;
+			padding: 0;
+			margin: 0;
+			overflow: none;
+		}
+		form {
+			text-align: center;
+			width: 50%;
+			margin: 25px auto 0;
+		}
+		label {
+			display: block;
+    		margin-bottom: 2em;
+		}
+		button {
+			font-size: 1.25em;
+		}
+		iframe {
+			width: calc(100vw - 24px);
+			height: 100vh;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label>
+			Enter AudioStreamer URL: <input type="text" name="url"></input>
+		</label>
+		<button type="submit">Go!</button>
+	</form>
+	<script>
+		require("./renderer.js");
+	</script>
+</body>
+</html>

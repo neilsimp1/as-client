@@ -11,7 +11,7 @@ function createWindow() {
 	mainWindow = new BrowserWindow({
 		width: 800,
 		height: 600,
-		icon: __dirname + "/audiostreamer_logo.gif",
+		icon: __dirname + "/audiostreamer_logo.ico",
 		"node-integration": false
 	});
 	mainWindow.setMenu(null);

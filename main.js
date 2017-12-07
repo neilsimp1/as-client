@@ -14,7 +14,7 @@ function createWindow() {
 		icon: __dirname + "/audiostreamer_logo.ico",
 		"node-integration": false
 	});
-	//mainWindow.setMenu(null);
+	mainWindow.setMenu(null);
 
 	mainWindow.loadURL(url.format({
 		pathname: path.join(__dirname, "index.html"),

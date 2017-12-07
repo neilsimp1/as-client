@@ -1,6 +1,6 @@
 {
   "name": "as-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A stupid Electron wrapper for AudioStreamer (https://audiostreamer.org/)",
   "main": "main.js",
   "scripts": {

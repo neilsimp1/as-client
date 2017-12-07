@@ -1,6 +1,5 @@
 const form = document.querySelector("form");
-
-let iframe = document.createElement("iframe");
+const webview = document.querySelector("webview");
 
 window.addEventListener("DOMContentLoaded", function() {
 	const url = window.localStorage.getItem("url");
@@ -17,10 +16,9 @@ form.addEventListener("submit", function() {
 function loadPage(url) {
 	window.localStorage.setItem("url", url);
 
-	iframe.src = url;
-
-	document.body.innerHTML = "";
-	document.body.appendChild(iframe);
+	form.parentElement.removeChild(form);
+	webview.src = url;
+	webview.style.display = "flex";
 
 	window.document.title = "AudioStreamer";
 	sessionStorage.setItem("isPageLoaded", true);
